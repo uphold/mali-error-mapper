@@ -1,0 +1,54 @@
+{
+  "name": "mali-error-mapper",
+  "version": "0.0.1",
+  "description": "Error mapper for Mali applications",
+  "keywords": [
+    "error",
+    "grpc",
+    "mali",
+    "mapper"
+  ],
+  "homepage": "https://github.com/uphold/mali-error-mapper#readme",
+  "bugs": {
+    "url": "https://github.com/uphold/mali-error-mapper/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uphold/mali-error-mapper.git"
+  },
+  "license": "MIT",
+  "author": "Uphold",
+  "main": "src/index.js",
+  "scripts": {
+    "changelog": "uphold-scripts changelog $npm_package_version",
+    "lint": "uphold-scripts lint",
+    "release": "uphold-scripts release",
+    "test": "uphold-scripts test",
+    "version": "uphold-scripts version"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "sf": "^0.2.0"
+  },
+  "devDependencies": {
+    "@uphold/http-errors": "git+ssh://git@github.com/uphold/http-errors#v1.2.0",
+    "@uphold/validator.js": "git+ssh://git@github.com/uphold/uphold-validator.js#v0.1.0",
+    "bignumber.js": "^9.0.0",
+    "grpc": "^1.24.1",
+    "grpc-caller": "^0.13.0",
+    "grpc-error": "1.0.0",
+    "mali": "^0.19.0",
+    "uphold-scripts": "git+ssh://git@github.com/uphold/uphold-scripts#v0.3.0",
+    "validator.js-asserts": "git+ssh://git@github.com/uphold/validator.js-asserts#v4.0.2"
+  },
+  "peerDependencies": {
+    "@uphold/http-errors": "git+ssh://git@github.com/uphold/http-errors#v1.2.0",
+    "grpc-error": "1.0.0"
+  },
+  "engines": {
+    "node": ">=8.10.0"
+  }
+}
