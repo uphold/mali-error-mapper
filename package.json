@@ -1,0 +1,44 @@
+{
+  "name": "mali-error-mapper",
+  "version": "0.0.1",
+  "description": "Error mapper for Mali applications",
+  "keywords": [
+    "error",
+    "grpc",
+    "mali",
+    "mapper"
+  ],
+  "license": "MIT",
+  "author": "Uphold",
+  "main": "src/index.js",
+  "scripts": {
+    "changelog": "uphold-scripts changelog $npm_package_version",
+    "lint": "uphold-scripts lint",
+    "release": "uphold-scripts release",
+    "test": "uphold-scripts test",
+    "version": "uphold-scripts version"
+  },
+  "dependencies": {
+    "grpc-error": "^1.0.0"
+  },
+  "devDependencies": {
+    "grpc": "^1.24.2",
+    "grpc-caller": "^0.13.0",
+    "lodash": "^4.17.15",
+    "mali": "^0.20.0",
+    "uphold-scripts": "^0.4.0"
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  },
+  "pre-commit": [
+    "lint"
+  ]
+}
