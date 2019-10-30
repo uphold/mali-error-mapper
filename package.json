@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "@uphold/http-errors": "^1.2.1",
-    "@uphold/validator.js": "git+ssh://git@github.com/uphold/uphold-validator.js#v0.1.0",
+    "@uphold/validator.js":"^0.1.1",
     "bignumber.js": "^9.0.0",
     "grpc": "^1.24.1",
     "grpc-caller": "^0.13.0",
@@ -45,8 +45,8 @@
     "validator.js-asserts": "^4.0.2"
   },
   "peerDependencies": {
-    "@uphold/http-errors": "git+ssh://git@github.com/uphold/http-errors#v1.2.0",
-    "grpc-error": "1.0.0"
+    "@uphold/http-errors": "^1.2.1",
+    "grpc-error": "^1.0.0"
   },
   "engines": {
     "node": ">=8.10.0"

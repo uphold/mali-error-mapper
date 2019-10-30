@@ -484,9 +484,10 @@
   dependencies:
     standard-http-error "2.0.0"
 
-"@uphold/validator.js@git+ssh://git@github.com/uphold/uphold-validator.js#v0.1.0":
-  version "0.1.0"
-  resolved "git+ssh://git@github.com/uphold/uphold-validator.js#edb96d291b71049d1d974a4a9a05356bac89a992"
+"@uphold/validator.js@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@uphold/validator.js/-/validator.js-0.1.1.tgz#90a4ff2450397653a7b42e92ac6a2c678977a836"
+  integrity sha512-qlnRfcQW0sY5zGY8TpyakvYJhdeUxsCGVmu/DSwWjYxryezaTRW+VLcoytUHjN2Hiq2wa9Zo8QIXYd9YtRysyQ==
   dependencies:
     debugnyan "^2.0.2"
     validator.js "^2.0.3"

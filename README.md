@@ -28,46 +28,35 @@ or via `npm`:
 
 There are three mappers available by default.
 
-- GenericErrorMapper
-    ```javascript
-    class GenericErrorMapper {
-      map(e) {
-        throw new GrpcError(e.message, e.code, {
-          stack: JSON.stringify(e.stack)
-        });
-      }
-    }
-    ```
-
 - HttpErrorMapper
-    ```javascript
-    class HttpErrorMapper {
-      map(e) {
-        if (!(e instanceof HttpError)) {
-          return;
-        }
-
-        throw new GrpcError(e.message, httpCodeToGrpcCode(e.code), {
-          errors: JSON.stringify(e.errors || {}),
-          status: e.code
-        });
+  ```javascript
+  class HttpErrorMapper {
+    map(e) {
+      if (!(e instanceof HttpError)) {
+        return;
       }
+
+      throw new GrpcError(e.message, httpCodeToGrpcCode(e.code), {
+        errors: JSON.stringify(e.errors || {}),
+        status: e.code
+      });
     }
-    ```
+  }
+  ```
 
 - ValidationFailedErrorMapper
-    ```javascript
-    class ValidationFailedErrorMapper {
-      map(e) {
-        ...
+  ```javascript
+  class ValidationFailedErrorMapper {
+    map(e) {
+      ...
 
-        throw new GrpcError('Validation failed', INVALID_ARGUMENT, {
-          errors: JSON.stringify(mapViolations(e.errors)),
-          status: e.code
-        });
-      }
+      throw new GrpcError('Validation failed', INVALID_ARGUMENT, {
+        errors: JSON.stringify(mapViolations(e.errors)),
+        status: e.code
+      });
     }
-    ```
+  }
+  ```
 
 ## Usage
 
