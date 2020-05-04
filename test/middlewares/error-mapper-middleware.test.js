@@ -94,6 +94,9 @@ describe('ErrorMapperMiddleware', () => {
           code: 'foo',
           message: 'bar'
         },
+        metadata: {
+          errors: {}
+        },
         status: 999
       }))
     };
@@ -110,7 +113,7 @@ describe('ErrorMapperMiddleware', () => {
     } catch (e) {
       expect(e.code).toEqual(999);
       expect(e.details).toEqual('bar');
-      expect(e.metadata.getMap()).toEqual({ code: 'foo' });
+      expect(e.metadata.getMap()).toEqual({ code: 'foo', errors: '{}' });
     }
   });
 });
