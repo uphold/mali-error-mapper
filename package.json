@@ -1,6 +1,6 @@
 {
   "name": "mali-error-mapper",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Error mapper for Mali applications",
   "keywords": [
     "error",
