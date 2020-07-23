@@ -4,6 +4,7 @@
  * Module dependencies.
  */
 
+const _ = require('lodash');
 const codes = require('../enums/grpc-status-codes-enum');
 const messages = require('../enums/grpc-status-messages-enum');
 const GrpcError = require('grpc-error');
@@ -12,7 +13,7 @@ const GrpcError = require('grpc-error');
  * Constants.
  */
 
-const STATUS_CODE_TO_NAME = Object.fromEntries(Object.entries(codes).map(code => code.reverse()));
+const STATUS_CODE_TO_NAME = _.invert(codes);
 
 /**
  * Class `GrpcErrorMapper`.

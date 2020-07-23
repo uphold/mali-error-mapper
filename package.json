@@ -31,6 +31,9 @@
   "peerDependencies": {
     "grpc-error": "^1.0.0"
   },
+  "engines": {
+    "node": ">=10"
+  },
   "jest": {
     "coverageThreshold": {
       "global": {
